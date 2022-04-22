@@ -55,6 +55,12 @@ public class User {
 	public void setUser_email(String user_email) {
 		this.user_email = user_email;
 	}
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", user_name=" + user_name + ", user_nic=" + user_nic + ", user_address="
+				+ user_address + ", user_zip_code=" + user_zip_code + ", user_contact_number=" + user_contact_number
+				+ ", user_email=" + user_email + "]";
+	}
 	
 	
 }
