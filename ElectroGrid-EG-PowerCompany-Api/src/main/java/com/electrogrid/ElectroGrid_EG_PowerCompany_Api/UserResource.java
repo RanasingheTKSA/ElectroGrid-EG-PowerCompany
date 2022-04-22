@@ -1,5 +1,7 @@
 package com.electrogrid.ElectroGrid_EG_PowerCompany_Api;
 
+import com.electrogrid.model.User;
+
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;

@@ -1,4 +1,4 @@
-package com.electrogrid.ElectroGrid_EG_PowerCompany_Api;
+package com.electrogrid.model;
 
 import jakarta.xml.bind.annotation.XmlRootElement;
 
