@@ -54,7 +54,31 @@
             <artifactId>jersey-media-json-binding</artifactId>
         </dependency>
         -->
+        
+        <!--  added dependencies -->
+        <dependency>
+		 <groupId>jakarta.xml.bind</groupId>
+		 <artifactId>jakarta.xml.bind-api</artifactId>
+		 <version>3.0.1</version>
+		</dependency>
+		
+		<dependency>
+			 <groupId>org.glassfish.jersey.media</groupId>
+			 <artifactId>jersey-media-jaxb</artifactId>
+		</dependency>
+		 
+		<dependency>
+			 <groupId>com.sun.xml.bind</groupId>
+			 <artifactId>jaxb-osgi</artifactId>
+			 <version>3.0.1</version>
+		</dependency>
+		
+		<dependency>
+		     <groupId>org.glassfish.jersey.media</groupId>
+		     <artifactId>jersey-media-json-jackson</artifactId>
+	     </dependency>	
     </dependencies>
+    
     <properties>
         <jersey.version>3.0.4</jersey.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
