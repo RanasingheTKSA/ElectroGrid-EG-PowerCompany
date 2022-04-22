@@ -1,8 +1,12 @@
 package com.electrogrid.ElectroGrid_EG_PowerCompany_Api;
 
+import java.util.List;
+
 import com.electrogrid.model.User;
+import com.electrogrid.repository.UserRepository;
 
 import jakarta.ws.rs.GET;
+import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
@@ -10,19 +14,21 @@ import jakarta.ws.rs.core.MediaType;
 @Path ("user")
 public class UserResource {
 
+	UserRepository userRepository = new UserRepository();
+	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public User getUser() {
+	public List<User> getUser() {
 		System.out.println("get user call");
 		
-		User user = new User();
-		user.setId("U001");
-		user.setUser_name("Ranasinghe TKSA");
-		user.setUser_nic("982570590V");
-		user.setUser_address("Arakavila, Handapangoda");
-		user.setUser_zip_code("12400");
-		user.setUser_contact_number("0712838354");
-		user.setUser_email("sachin@gmail.com");
+		return userRepository.getUsers();
+	}
+	
+	@POST
+	@Path("add-user")
+	public User addNewUser(User user) {
+		System.out.println(user);
+		userRepository.addUser(user);
 		
 		return user;
 	}
