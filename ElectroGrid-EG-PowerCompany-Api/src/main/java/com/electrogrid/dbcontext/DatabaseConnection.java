@@ -13,16 +13,17 @@ public class DatabaseConnection implements IDBContext {
 	
 	public DatabaseConnection() {
 		this.dbContextDriverName = "com.mysql.jdbc.Driver";
-		this.dbContextConnectionString = "jdbc:mqsql://localhost:3306/electro_grid";
+		this.dbContextConnectionString = "jdbc:mysql://localhost:3306/electro_grid";
 		this.dbContextUser = "root";
 		this.dbContextPassword = "root";
+		
 	}
 	
 	@Override
 	public Connection getDatabaseConnection() {
 		try {
 			Class.forName(dbContextDriverName);
-			dbContextConnection = (Connection)DriverManager.getConnection(dbContextConnectionString, dbContextUser, dbContextPassword);
+			dbContextConnection = DriverManager.getConnection(dbContextConnectionString, dbContextUser, dbContextPassword);
 			
 			System.out.println("Database Connection Established");
 			
