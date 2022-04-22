@@ -1,1 +1,0 @@
-fytextfield.txt file is about to my project deficulties. delete this befor next commit
