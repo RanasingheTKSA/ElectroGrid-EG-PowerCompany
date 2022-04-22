@@ -53,12 +53,17 @@ public class UserRepository {
 		return users;
 	}
 	
+	//get user by user id
+	public User getUserById(int id) {
+		return null;
+	}
+	
 	//add new users for the data base
 	public void addUser(User user) {
 		String sql = "insert into user value (?,?,?,?,?,?,?)";
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
-			//preparedStatement.setString(1,	user.getId());
+			preparedStatement.setString(1,	user.getId());
 			preparedStatement.setString(2,user.getUser_name());
 			preparedStatement.setString(3, user.getUser_nic());
 			preparedStatement.setString(4, user.getUser_address());
@@ -66,10 +71,22 @@ public class UserRepository {
 			preparedStatement.setString(6, user.getUser_contact_number());
 			preparedStatement.setString(7, user.getUser_email());
 			
+			preparedStatement.executeUpdate();
+			
 		} catch (Exception e) {
 			System.out.println(e);
 		}
 	}
+
+	// update user of the database
+	public void update(User user) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	
+	
 
 	
 }
