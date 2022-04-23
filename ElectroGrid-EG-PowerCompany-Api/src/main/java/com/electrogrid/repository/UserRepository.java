@@ -1,18 +1,13 @@
 package com.electrogrid.repository;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-
-import javax.swing.table.TableStringConverter;
 
 import java.sql.*;
 
 import com.electrogrid.dbcontext.DatabaseConnection;
 import com.electrogrid.dbcontext.IDBContext;
 import com.electrogrid.model.User;
-import com.sun.java_cup.internal.runtime.Scanner;
-import com.sun.java_cup.internal.runtime.Symbol;
 
 public class UserRepository {
 	
@@ -157,7 +152,7 @@ public class UserRepository {
 			statement.setInt(1, id);
 			statement.executeUpdate();
 			
-			response = "successfuly Deleted"; 
+			response = "successfuly Deleted \n";
 			
 		} catch (Exception e) {
 			System.out.println(e);
