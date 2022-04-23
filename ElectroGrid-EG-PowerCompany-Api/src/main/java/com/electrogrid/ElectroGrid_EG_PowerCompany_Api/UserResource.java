@@ -28,7 +28,7 @@ public class UserResource {
 	}
 	
 	@GET
-	@Path("getoneuser/{id}")
+	@Path("user/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<User> getUser(@PathParam("id") int id) {
 		return userRepository.getUser(id);
@@ -50,11 +50,9 @@ public class UserResource {
 	public String updateUser( User user) {
 		return userRepository.updateUser(user);
 	}
-	
-	
-	
+		
 	@DELETE
-	@Path ("user/{id}")
+	@Path ("delete-user/{id}")
 	public String deleteUser (@PathParam("id") int id) {	
 		return userRepository.detele(id);
 				
