@@ -65,7 +65,7 @@ public class PowerRepository {
 	
 	//add new users for the data base
 		public void addPower(Power power) {
-			String sql = "insert into power value (?,?,?,?,?,?,?,?)";
+			String sql = "insert into powers value (?,?,?,?,?,?,?,?)";
 			try {
 				PreparedStatement preparedStatement = connection.prepareStatement(sql);
 				//preparedStatement.setString(1,	user.getId());
@@ -79,6 +79,7 @@ public class PowerRepository {
 				
 			} catch (Exception e) {
 				System.out.println(e);
+				System.out.println("insert into powers statement fail");
 			}
 		}
 

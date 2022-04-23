@@ -30,10 +30,11 @@ PowerRepository powerRepository = new PowerRepository();
 	}
 	
 	@POST
-	@Path("add-power")
+	@Path("addpower")
 	public Power addNewPower(Power power) {
 		System.out.println(power);
 		powerRepository.addPower(power);
+	//System.out.println("post power call");
 		
 		return power;
 	}
