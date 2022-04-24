@@ -13,7 +13,7 @@ public class DatabaseConnection implements IDBContext {
 	
 	public DatabaseConnection() {
 		this.dbContextDriverName = "com.mysql.jdbc.Driver";
-		this.dbContextConnectionString = "jdbc:mysql://localhost:3306/electro_grid";
+		this.dbContextConnectionString = "jdbc:mysql://localhost:3310/electro_grid";
 		this.dbContextUser = "root";
 		this.dbContextPassword = "root";
 		

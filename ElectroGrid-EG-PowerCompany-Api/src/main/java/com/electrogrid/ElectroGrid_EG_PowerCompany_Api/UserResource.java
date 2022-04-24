@@ -2,10 +2,11 @@ package com.electrogrid.ElectroGrid_EG_PowerCompany_Api;
 
 import java.util.List;
 
+
 import com.electrogrid.model.User;
 import com.electrogrid.repository.UserRepository;
 
-import jakarta.websocket.server.PathParam;
+import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
