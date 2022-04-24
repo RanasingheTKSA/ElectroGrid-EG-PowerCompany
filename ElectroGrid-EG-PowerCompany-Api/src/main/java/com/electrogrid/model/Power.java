@@ -5,7 +5,7 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class Power {
 	
-	private String id;
+	private int id;
 	private String power_connection_type;
 	private String power_bill_id;
 	private String power_used_units;
@@ -15,12 +15,12 @@ public class Power {
 	private String power_bill_value;
 	
 	
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
