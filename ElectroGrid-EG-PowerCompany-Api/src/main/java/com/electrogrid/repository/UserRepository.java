@@ -59,10 +59,6 @@ public class UserRepository {
 		String sql = " SELECT * FROM `electro_grid`.`user` WHERE (`id` = "+id+");";
 		try {
 			
-			//PreparedStatement preparedStatement = connection.prepareStatement(sql);
-			//preparedStatement.setInt(1, id);
-	
-			
 			Statement statement = connection.createStatement();
 			ResultSet resultSet = statement.executeQuery(sql);
 			while (resultSet.next()) {
@@ -77,7 +73,7 @@ public class UserRepository {
 				
 				users.add(user);
 			}
-			//preparedStatement.executeUpdate();
+	
 		} catch (Exception e) {
 			System.out.println(e);
 		}
@@ -159,6 +155,5 @@ public class UserRepository {
 		}
 		return response;
 	}
-	
 	
 }
