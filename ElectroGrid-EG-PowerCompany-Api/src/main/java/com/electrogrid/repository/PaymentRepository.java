@@ -98,7 +98,7 @@ public class PaymentRepository {
 		
 		//add new payments for the data base
 		public void addPayment(Payment payment) {
-			String sql = "insert into user value (?,?,?,?,?,?,?)";
+			String sql = "insert into payment value (?,?,?,?,?,?,?)";
 			try {
 				PreparedStatement preparedStatement = connection.prepareStatement(sql);
 				preparedStatement.setInt(1,	payment.getId());

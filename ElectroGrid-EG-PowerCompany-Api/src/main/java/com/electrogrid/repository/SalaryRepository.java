@@ -105,7 +105,7 @@ public class SalaryRepository {
 	
 	//add new salary for the data base
 	public void addSalary(Salary salary) {
-		String sql = "insert into user value (?,?,?,?,?,?,?,?,?,?,?)";
+		String sql = "insert into salary value (?,?,?,?,?,?,?,?,?,?,?)";
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setInt(1,	salary.getId());
