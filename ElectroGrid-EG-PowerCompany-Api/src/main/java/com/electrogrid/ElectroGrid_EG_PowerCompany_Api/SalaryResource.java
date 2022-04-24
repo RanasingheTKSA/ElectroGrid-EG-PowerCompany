@@ -23,19 +23,17 @@ SalaryRepository salaryRepository = new SalaryRepository();
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public List<Salary> getSalary() {
+	public List<Salary> getSalary_s() {
 		
-		System.out.println("getSalary called..");
-		
-		  
+	  
 		  return salaryRepository.getSalary_s();
 	}
 	
 	@GET
 	@Path("salary/{id}")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Salary getSalaryById(@PathParam("id")int id) {
-		return salaryRepository.getSalaryById(id);
+	public List<Salary> getSalary(@PathParam("id")int id) {
+		return salaryRepository.getSalary(id);
 	}
 	
 	@POST

@@ -1,6 +1,7 @@
 package com.electrogrid.repository;
 
 import java.sql.Connection;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -98,13 +99,13 @@ public class SalaryRepository {
 	}
 	
 	//get user by salary id
-	public Salary getSalaryById(int id) {
-		return null;
-	}
+//	public Salary getSalaryById(int id) {
+	//	return null;
+//	}
 	
 	//add new salary for the data base
 	public void addSalary(Salary salary) {
-		String sql = "insert into user value (?,?,?,?,?,?,?)";
+		String sql = "insert into user value (?,?,?,?,?,?,?,?,?,?,?)";
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setInt(1,	salary.getId());

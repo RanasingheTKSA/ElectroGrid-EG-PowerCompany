@@ -2,7 +2,6 @@ package com.electrogrid.repository;
 
 import java.sql.Connection;
 
-import java.sql.*;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -93,9 +92,9 @@ public class PaymentRepository {
 		}
 		
 		//get user by payment id
-		public Payment getPaymentById(int id) {
-			return null;
-		}
+		//public Payment getPaymentById(int id) {
+	//		return null;
+	//	}
 		
 		//add new payments for the data base
 		public void addPayment(Payment payment) {
