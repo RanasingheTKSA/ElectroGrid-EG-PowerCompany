@@ -1,6 +1,7 @@
 package com.electrogrid.repository;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 import java.sql.*;
@@ -59,10 +60,7 @@ public class UserRepository {
 		String sql = " SELECT * FROM `electro_grid`.`user` WHERE (`id` = "+id+");";
 		try {
 			
-			//PreparedStatement preparedStatement = connection.prepareStatement(sql);
-			//preparedStatement.setInt(1, id);
-	
-			
+
 			Statement statement = connection.createStatement();
 			ResultSet resultSet = statement.executeQuery(sql);
 			while (resultSet.next()) {
@@ -77,7 +75,7 @@ public class UserRepository {
 				
 				users.add(user);
 			}
-			//preparedStatement.executeUpdate();
+
 		} catch (Exception e) {
 			System.out.println(e);
 		}
@@ -140,7 +138,7 @@ public class UserRepository {
 		
 		return response;
 	}
-	
+
 	// delete user from the database
 	public String detele(int id) {
 		
@@ -159,6 +157,26 @@ public class UserRepository {
 		}
 		return response;
 	}
+
+	
+//	// delete user from the database
+//	public String detele(int id) {
+//		
+//		String sql = "DELETE FROM `electro_grid`.`user` WHERE (`id` = ?);";
+//		String response = null;
+//		
+//		try {
+//			PreparedStatement statement = connection.prepareStatement(sql);
+//			statement.setInt(1, id);
+//			statement.executeUpdate();
+//			
+//			response = "successfuly Deleted \n";
+//			
+//		} catch (Exception e) {
+//			System.out.println(e);
+//		}
+//		return response;
+//	}
 	
 	
 }

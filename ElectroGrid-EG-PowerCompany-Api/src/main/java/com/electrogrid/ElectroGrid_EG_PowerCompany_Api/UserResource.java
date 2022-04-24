@@ -2,9 +2,9 @@ package com.electrogrid.ElectroGrid_EG_PowerCompany_Api;
 
 import java.util.List;
 
+
 import com.electrogrid.model.User;
 import com.electrogrid.repository.UserRepository;
-
 
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.DELETE;
