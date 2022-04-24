@@ -172,7 +172,7 @@ public class PowerRepository {
 			
 			//String sql = "DELETE FROM `electro_grid`.`powers` WHERE (`id` = ?);";
 			
-			String sql = "DELETE FROM `electro_grid`.`powers` WHERE (`id` = ?)";
+			String sql = "DELETE FROM `electro_grid`.`powers` WHERE (`id` = ?);";
 			String response = null;
 			
 			try {
