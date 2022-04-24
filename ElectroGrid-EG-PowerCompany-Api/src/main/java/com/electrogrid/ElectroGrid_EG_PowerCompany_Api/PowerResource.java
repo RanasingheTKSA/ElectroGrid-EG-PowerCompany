@@ -60,7 +60,7 @@ PowerRepository powerRepository = new PowerRepository();
 	
 	@DELETE
 	@Path ("delete-power/{id}")
-	@Consumes (MediaType.APPLICATION_JSON)
+	//@Consumes (MediaType.APPLICATION_JSON)
 	public String deletePower (@PathParam("id") int id) {	
 		return powerRepository.detele(id);
 				
