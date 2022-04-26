@@ -25,7 +25,7 @@ PowerRepository powerRepository = new PowerRepository();
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public List<Power> getPower() {
+	public List<Power> getPowers() {
 		System.out.println("get power call");
 		
 		return powerRepository.getPowers();

@@ -7,7 +7,7 @@ import java.sql.*;
 import com.electrogrid.dbcontext.DatabaseConnection;
 import com.electrogrid.dbcontext.IDBContext;
 import com.electrogrid.model.Power;
-import com.electrogrid.model.User;
+//import com.electrogrid.model.User;
 import com.sun.java_cup.internal.runtime.Scanner;
 import com.sun.java_cup.internal.runtime.Symbol;
 
@@ -34,7 +34,7 @@ public class PowerRepository {
 	public List<Power> getPowers(){
 		
 		List<Power> powers = new ArrayList<Power>();
-		String sql = "SELECT * FROM powers";
+		String sql = "SELECT * FROM power";
 		try {
 			Statement statement = connection.createStatement();
 			ResultSet resultSet = statement.executeQuery(sql);
@@ -64,7 +64,7 @@ public class PowerRepository {
 		public List<Power> getPower(int id){
 			
 			List<Power> powers = new ArrayList<Power>();
-			String sql = " SELECT * FROM `electro_grid`.`powers` WHERE (`id` = "+id+");";
+			String sql = " SELECT * FROM `electro_grid`.`power` WHERE (`id` = "+id+");";
 			try {
 				
 				//PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -98,7 +98,7 @@ public class PowerRepository {
 	//add new users for the data base
 		public void addPower(Power power) {
 //			String sql = "insert into powers value (?,?,?,?,?,?,?,?)";
-			String sql = "INSERT INTO `electro_grid`.`powers` (`id`, `power_connection_type`, `power_bill_id`, `power_used_units`, `power_unit_value`, `power_pay_value`, `power_pay_balance`, `power_bill_value`)"
+			String sql = "INSERT INTO `electro_grid`.`power` (`id`, `power_connection_type`, `power_bill_id`, `power_used_units`, `power_unit_value`, `power_pay_value`, `power_pay_balance`, `power_bill_value`)"
 					+ " VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 			try {
 				PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -129,7 +129,7 @@ public class PowerRepository {
 			//String sql = "UPDATE `electro_grid`.`powers` SET `power_connection_type` = ?, `power_bill_id` = ?, `power_used_units` = ?, `power_unit_value` = ?, "
 					//+ "`power_pay_value` =? , `power_bill_value` = ?, `power_pay_balance` =?,WHERE `id` = ?";
 			
-			String sql = "UPDATE `electro_grid`.`powers` SET `power_connection_type` = ?, `power_bill_id` = ?, `power_used_units` = ?, `power_unit_value` = ?, `power_pay_value` = ?, `power_pay_balance` = ?, `power_bill_value` = ? WHERE (`id` = ?)";
+			String sql = "UPDATE `electro_grid`.`power` SET `power_connection_type` = ?, `power_bill_id` = ?, `power_used_units` = ?, `power_unit_value` = ?, `power_pay_value` = ?, `power_pay_balance` = ?, `power_bill_value` = ? WHERE (`id` = ?)";
 
 			String response = null;
 			
@@ -172,7 +172,7 @@ public class PowerRepository {
 			
 			//String sql = "DELETE FROM `electro_grid`.`powers` WHERE (`id` = ?);";
 			
-			String sql = "DELETE FROM `electro_grid`.`powers` WHERE (`id` = ?)";
+			String sql = "DELETE FROM `electro_grid`.`power` WHERE (`id` = ?)";
 			String response = null;
 			
 			try {
